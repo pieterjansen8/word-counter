@@ -16,7 +16,7 @@ export default function NotFound() {
   setup()
   return (
     <div className="grid  bg-slate-800 h-screen justify-items-center  sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <span className=' font-medium text-white text-lg sm:text-3xl mt-4'>ERROR  server can&apos;t find page: "{window.location.pathname}" ! </span>
+      <span className=' font-medium text-white text-lg sm:text-3xl mt-4'>ERROR  server can&apos;t find page: &quot;{window.location.pathname}&quot; ! </span>
       <div className="flex items-center space-x-2">
         <Checkbox className='bg-white' id="terms" onCheckedChange={handlecheck}/>
         <label
