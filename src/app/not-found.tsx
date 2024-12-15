@@ -10,13 +10,13 @@ export default function NotFound() {
       if(localStorage.getItem("auto-redirect")=="true"){
         router.push("/")
       }
-    })
+    }, [])
   }
   function Handlecheck(){
     useEffect(() => {
        localStorage.setItem("auto-redirect", "true")
        router.push("/")
-    })
+    }, [])
   }
   Setup()
   return (
