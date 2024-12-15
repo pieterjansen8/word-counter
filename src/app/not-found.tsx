@@ -1,17 +1,22 @@
 'use client';
 import Link from 'next/link'
+import { useEffect } from 'react';
 import {useRouter} from 'next/navigation';
 import { Checkbox } from '@/components/ui/checkbox';
 export default function NotFound() {
   const router =  useRouter()
   const setup = () => { 
-    if(localStorage.getItem("auto-redirect")=="true"){
-      router.push("/")
-    }
+    useEffect(() => {
+      if(localStorage.getItem("auto-redirect")=="true"){
+        router.push("/")
+      }
+    })
   }
   function handlecheck(){
-    localStorage.setItem("auto-redirect", "true")
-    router.push("/")
+    useEffect(() => {
+       localStorage.setItem("auto-redirect", "true")
+       router.push("/")
+    })
   }
   setup()
   return (
